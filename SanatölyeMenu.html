@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanatölye Cafe Menü</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #f7f3ef, #dbc6b0);
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .menu-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      background: url('https://www.kulturportali.gov.tr/contents/images/11072014_b113c8c1-d8e9-4a7c-aa8b-59f5bf6ab5f2%20(1).JPG');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .cafe-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+      opacity: 0.9;
+    }
+
+    .menu-content {
+      padding: 40px 30px;
+    }
+
+    .menu-section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #8B5E3C;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, #8B5E3C, #A9745B);
+      border-radius: 2px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #fcf8f4;
+      border-radius: 10px;
+      border-left: 4px solid #8B5E3C;
+      transition: all 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(139, 94, 60, 0.2);
+    }
+
+    .item-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .item-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #8B5E3C;
+    }
+
+    .price-symbol {
+      font-size: 0.9rem;
+      margin-left: 2px;
+    }
+
+    .section-image-placeholder {
+      width: 200px;
+      height: 120px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: white;
+      font-weight: bold;
+    }
+
+    .drink-image {
+        background-image: url("https://cdnuploads.aa.com.tr/uploads/Contents/2019/07/11/thumbs_b_c_02ba01e7472d72b72617f97c9fb77d1c.jpg");
+    }
+    .food-image {
+      background-image: url("https://marmarabolge.com/wp-content/uploads/2024/11/kapak-9.webp");
+    }
+
+    .footer {
+      background: #fcf8f4;
+      padding: 20px 30px;
+      text-align: center;
+      color: #666;
+      border-top: 2px solid #eee0d1;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .menu-container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cafe-name {
+        font-size: 2.2rem;
+      }
+
+      .menu-content {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="header">
+      <h1 class="cafe-name">Sanatölye Cafe</h1>
+      <p class="subtitle">Sanat & Lezzet Buluşması</p>
+    </div>
+
+    <div class="menu-content">
+      <div class="menu-section">
+        <h2 class="section-title">İçecekler</h2>
+        <div class="section-image-placeholder drink-image" ></div>
+
+        <div class="menu-grid">
+          <div class="menu-item"><span class="item-name">Çay</span><span class="item-price">20₺</span></div>
+          <div class="menu-item"><span class="item-name">Türk Kahvesi</span><span class="item-price">60₺</span></div>
+          <div class="menu-item"><span class="item-name">Gazoz</span><span class="item-price">45₺</span></div>
+          <div class="menu-item"><span class="item-name">Meyveli Soda</span><span class="item-price">45₺</span></div>
+          <div class="menu-item"><span class="item-name">Soda</span><span class="item-price">35₺</span></div>
+          <div class="menu-item"><span class="item-name">Sade Nescafe</span><span class="item-price">60₺</span></div>
+          <div class="menu-item"><span class="item-name">Sütlü Nescafe</span><span class="item-price">70₺</span></div>
+          <div class="menu-item"><span class="item-name">Bitki Çayı</span><span class="item-price">40₺</span></div>
+          <div class="menu-item"><span class="item-name">Filtre Kahve</span><span class="item-price">80₺</span></div>
+          <div class="menu-item"><span class="item-name">Churchill</span><span class="item-price">70₺</span></div>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h2 class="section-title">Yiyecekler</h2>
+        <div class="section-image-placeholder food-image"></div>
+
+        <div class="menu-grid">
+          
+          <div class="menu-item"><span class="item-name">Kaşarlı Tost</span><span class="item-price">45₺</span></div>
+          <div class="menu-item"><span class="item-name">Sucuklu Tost</span><span class="item-price">60₺</span></div>
+          <div class="menu-item"><span class="item-name">Yaprak Sarma</span><span class="item-price">100₺</span></div>
+          <div class="menu-item"><span class="item-name">Köfte Tabağı</span><span class="item-price">250₺</span></div>
+          <div class="menu-item"><span class="item-name">Mantı Tabağı</span><span class="item-price">150₺</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Afiyet olsun! 🎨 ☕</p>
+    </div>
+  </div>
+</body>
+</html>
